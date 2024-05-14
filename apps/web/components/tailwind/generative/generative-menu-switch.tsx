@@ -1,5 +1,5 @@
 import { EditorBubble, useEditor } from "novel";
-import React, { Fragment, useEffect, type ReactNode } from "react";
+import { Fragment, useEffect, type ReactNode } from "react";
 import { Button } from "../ui/button";
 import { AISelector } from "./ai-selector";
 import Magic from "../ui/icons/magic";
@@ -11,11 +11,7 @@ interface GenerativeMenuSwitchProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
 }
-const GenerativeMenuSwitch = ({
-  children,
-  open,
-  onOpenChange,
-}: GenerativeMenuSwitchProps) => {
+const GenerativeMenuSwitch = ({ children, open, onOpenChange }: GenerativeMenuSwitchProps) => {
   const { editor } = useEditor();
 
   useEffect(() => {

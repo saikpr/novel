@@ -30,7 +30,9 @@
   "scripts": {
     "dev": "tsup --watch",
     "check-types": "tsc --noEmit",
-    "build": "tsup"
+    "build": "tsup",
+    "lint": "biome lint ./src",
+    "format": "biome format ./src "
   },
   "sideEffects": false,
   "peerDependencies": {
@@ -40,6 +42,7 @@
   "dependencies": {
     "@radix-ui/react-slot": "^1.0.2",
     "@tiptap/core": "^2.1.7",
+    "@tiptap/extension-code-block-lowlight": "^2.2.6",
     "@tiptap/extension-color": "^2.1.7",
     "@tiptap/extension-highlight": "^2.1.7",
     "@tiptap/extension-horizontal-rule": "^2.1.7",
@@ -54,7 +57,6 @@
     "@tiptap/react": "^2.1.7",
     "@tiptap/starter-kit": "^2.1.7",
     "@tiptap/suggestion": "^2.1.7",
-    "tiptap-extension-auto-joiner": "^0.1.1",
     "tiptap-extension-global-drag-handle": "^0.1.6",
     "@types/node": "18.15.3",
     "cmdk": "^0.2.1",
@@ -70,6 +72,7 @@
     "@types/react-dom": "18.2.19",
     "tsconfig": "workspace:*",
     "tsup": "^8.0.2",
+    "@biomejs/biome": "^1.7.2",
     "typescript": "^5.3.3"
   },
   "author": "Steven Tey <stevensteel97@gmail.com>",
